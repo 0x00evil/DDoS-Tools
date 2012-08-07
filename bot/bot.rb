@@ -138,7 +138,7 @@ end
 
 EM.run { 
 	if($log_events)
-		$log.info "Starting the bot"
+		$log.info "Starting the bot - IP address #{$current_ip}"
 	end
 
 	EventMachine.add_periodic_timer(1) {
@@ -157,6 +157,7 @@ EM.run {
 			end
 			kill_children
 			$is_new_command = false
+			$should_relaunch = true
 			BotCommand.new($command_to_run)
 		end
 	}
