@@ -18,4 +18,5 @@ All bots check the controlling file every second to see if new commands have bee
   * kill_bot - Setting this to true will kill the bots associated with in the hosts element
   * run_once - Setting this to true tells the bot to only run a command once and then wait for more commands
 * Once the yaml file has been modified upload it to a web server that is accessible to all bots
-* Launch bots by using the following command `ruby bot <URL_OF_CONTROLLER_FILE>`
+* Launch bots by using the following command `ruby bot.rb --controller-url <URL_OF_CONTROLLER_FILE>`
+* Other options can be found by using the help command `ruby bot.rb --help`
